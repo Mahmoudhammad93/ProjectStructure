@@ -1,0 +1,72 @@
+include pug/head
+  body
+    include pug/navbar
+    content.wrapper(style="background-color: #ddd")
+      #contact-us
+        .cover
+          .overlay
+            .cover-footer
+              .breadcrumbs
+                ul.list-unstyled
+                  li|Home
+                  li|Page Name
+              .back
+                span.btn-back|Back
+        .contact
+            .contact-info
+                .row
+                    .col-lg-8
+                        .map
+                            iframe(id="gmap_canvas" src="https://maps.google.com/maps?q=2880%20Broadway,%20New%20York&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0")
+                    .col-lg-4
+                        .getIn
+                            h3.getIn-title|Get In Touch
+                            p.getIn-desc|if you are intersted in working with us. please get in touch
+                            .info
+                                ul.list-unstyled
+                                    -var infos = [{name:'location', icon:'map-marker', content: '75 South Park Avenu, Doha, Qatar'},{name:'phone', icon:'phone', content: '123456789 - from 8:00 to 4:00'},{name:'email', icon:'paper-plane', content: 'Shreif@Qaqarat.com'},]
+                                    each info in infos
+                                        li
+                                            i(class="fa fa-"+info.icon)
+                                            p(class=info.name)=info.content
+                            .social
+                                ul.list-unstyled
+                                    - var socials = ['facebook','twitter','google-plus']
+                                    each social in socials
+                                        li(class=social)
+                                            a(href="#")
+                                                i(class="fa fa-"+social)
+            .feedback.mt-4
+                .row
+                    .col-lg-3
+                        .countries
+                            - var countries = [{name:'Qatar', address:'75 South Park Avenu, Doha, Qatar', phone:'123123123', email: 'Shreif@Qaqarat.com'},{name:'Turkey',address:'75 South Park Avenu, Doha, Qatar', phone:'123123123', email: 'Shreif@Qaqarat.com'},{name:'New york',address:'75 South Park Avenu, Doha, Qatar', phone:'123123123', email: 'Shreif@Qaqarat.com'}]
+                            each country in countries
+                                .country-info
+                                    h2.name=country.name
+                                    ul.list-unstyled
+                                        li
+                                            span.label|Address: 
+                                            span.address=country.address
+                                        li
+                                            span.label|Phone: 
+                                            span.phone=country.phone
+                                        li
+                                            span.label|Email: 
+                                            span.email=country.email
+                    .col-lg-9
+                        .feedback-form
+                            h2.feedback-title.col-lg-12|FeedBack
+                            form
+                                .form-group.col-lg-12
+                                    input(type="text" class="form-control" placeholder="name")
+                                .form-group.col-lg-12
+                                    input(type="text" class="form-control" placeholder="name")
+                                .form-group.col-lg-12
+                                    input(type="text" class="form-control" placeholder="name")
+                                .form-group.col-lg-12
+                                    textarea(class="form-control" placeholder="name" rows=5)
+                                .form-group.col-lg-4
+                                    button|Send Message
+
+include pug/footer

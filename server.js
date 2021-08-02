@@ -2,9 +2,9 @@ var StaticServer = require('static-server');
 
 var server = new StaticServer({
 	rootPath: './dist/',
-	port: 8000
+	port: 10000
 });
 
 server.start(function(){
-	console.log('Server Is Started At Port ', server.port)
+	console.log('Server Is Started At Port =','http://localhost:'+server.port)
 });

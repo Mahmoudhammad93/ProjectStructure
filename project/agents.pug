@@ -1,0 +1,64 @@
+include pug/head
+  body
+    include pug/navbar
+    content.wrapper(style="background-color: #ddd")
+      #agents-developers
+        .cover
+          .overlay
+            .cover-footer
+              .breadcrumbs
+                ul.list-unstyled
+                  li|Home
+                  li|Page Name
+              .back
+                span.btn-back|Back
+        h4.special-title
+            span.brand|Qaqarat 
+            |Real-estate Developer
+        section.developers
+            - var agents = [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
+            each agent in agents
+                .box
+                    .image
+                        img(src="./images/aqar.jpeg")
+                    .info
+                        h4.name|Shreif Mohamed
+                        ul.list-unstyled
+                            li
+                                i(class="fa fa-question")
+                                |123-456-789
+                            li
+                                i(class="fa fa-question")
+                                |mahmoudhammad423@gmail.com
+            .pagination
+                ul.list-unstyled
+                    - var paginate_list = [1,2,3,4,5,6,7,8,9,10]
+                    each item in paginate_list
+                        li
+                            span=item
+        h4.special-title
+            span.brand|Qaqarat 
+            |Agents
+        section.agents
+            - var agents = [1,1,1,1,1]
+            each agent in agents
+                .box
+                    .image
+                        img(src="./images/aqar.jpeg")
+                    .info
+                        h4.name|Shreif Mohamed
+                        ul.list-unstyled
+                            li
+                                i(class="fa fa-question")
+                                |123-456-789
+                            li
+                                i(class="fa fa-question")
+                                |mahmoudhammad423@gmail.com
+            .pagination
+                ul.list-unstyled
+                    - var paginate_list = [1,2,3,4,5,6,7,8,9,10]
+                    each item in paginate_list
+                        li
+                            span=item
+            button|Be a part of Qaqarat
+include pug/footer

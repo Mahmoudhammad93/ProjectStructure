@@ -1,0 +1,69 @@
+include pug/head
+	body
+		include pug/navbar
+		content.wrapper(style="background-color: #ddd")
+			#news
+				.cover
+					.overlay
+						.list
+							h1.head-title|Latest News
+						.cover-footer
+							.breadcrumbs
+								ul.list-unstyled
+									li|Home
+									li|Page Name
+							.back
+								span.btn-back|Back
+				section.feature-list
+					h3.section-title
+						i(class="fa fa-building")
+						|Find Properties In Al Rayan
+					.features
+						.options
+							.filters
+								ul.list-unstyled
+									- var filter_list = ['All','For Sale','For Rent','Commercial','Lands']
+									each item in filter_list
+										li=item
+							.sort-by
+								div(class="btn-group")
+									|Sort By :
+									button(class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")|Most Popular
+									div(class="dropdown-menu")
+										a(class="dropdown-item" href="#")|Arabic
+										a(class="dropdown-item" href="#")|English
+							.views
+								ul.list-unstyled
+									li
+										i(class="fa fa-th-list")
+									li
+										i(class="fa fa-th")
+								.count-pages
+									div(class="btn-group")
+										button(class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+											|12 Per Pages
+											span(class="icon")
+										div(class="dropdown-menu")
+											a(class="dropdown-item" href="#")|Arabic
+											a(class="dropdown-item" href="#")|English
+						.items
+							.row
+								- var items = [{name:'The Project Name'},{name:'The Project Name'},{name:'The Project Name'},{name:'The Project Name'},{name:'The Project Name'},{name:'The Project Name'},{name:'The Project Name'},{name:'The Project Name'},{name:'The Project Name'},{name:'The Project Name'},{name:'The Project Name'},{name:'The Project Name'}]
+								each item in items
+									.col-lg-3.col-sm-6.mb-4
+										.box-info
+											.image
+												img(src='./images/aqar.jpeg')
+											.info
+												h6.box-title|Ancient House Resort Hoi an
+												span.date|Dec 29th, 2021
+												p.box-description|Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when
+												a(href="#" class="read-more")|Read More
+								.pagination
+									.col-lg-12
+										ul.list-unstyled
+											- var paginate_list = [1,2,3,4,5,6,7,8,9,10]
+											each item in paginate_list
+												li
+													span=item
+include pug/footer

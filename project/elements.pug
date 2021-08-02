@@ -1,0 +1,71 @@
+include pug/head
+	body
+		include pug/navbar
+		content.wrapper(style="background-color: #ddd")
+			section.feature-list
+				.features
+					.options
+						.filters
+							ul.list-unstyled
+								- var filter_list = ['All','For Sale','For Rent','Commercial','Lands']
+								each item in filter_list
+									li=item
+						.sort-by
+							div(class="btn-group")
+								|Sort By :
+								button(class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")|Most Popular
+								div(class="dropdown-menu")
+									a(class="dropdown-item" href="#")|Arabic
+									a(class="dropdown-item" href="#")|English
+						.views
+							ul.list-unstyled
+								li.list
+									i(class="fa fa-th-list")
+								li.grid.active
+									i(class="fa fa-th")
+							.count-pages
+								div(class="btn-group")
+									button(class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+										|12 Per Pages
+										span(class="icon")
+									div(class="dropdown-menu")
+										a(class="dropdown-item" href="#")|Arabic
+										a(class="dropdown-item" href="#")|English
+					.items.grid
+						- var items = [{name:'The Project Name'},{name:'The Project Name'},{name:'The Project Name'},{name:'The Project Name'},{name:'The Project Name'},{name:'The Project Name'},{name:'The Project Name'},{name:'The Project Name'},{name:'The Project Name'},{name:'The Project Name'},{name:'The Project Name'},{name:'The Project Name'}]
+						each item in items
+							.box
+								.image
+									img(src="./images/aqar.jpeg")
+								.description
+									.name
+										p=item.name
+									.info
+										span.location
+											i(class="fa fa-map-marker") 
+											|The Pearl Doha
+										span.price
+											span.price-label|Price:
+											|QAR1200
+										p.desc|Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic
+									.box-footer
+										ul.list-unstyled
+											li
+												i(class="fa fa-home")
+												span|391 m
+											li
+												i(class="fa fa-bath")
+												span|3
+											li
+												i(class="fa fa-bed")
+												span|9
+											li
+												i(class="fa fa-home")
+												span|1
+						.pagination
+							ul.list-unstyled
+								- var paginate_list = [1,2,3,4,5,6,7,8,9,10]
+								each item in paginate_list
+									li
+										span=item
+		include pug/footer

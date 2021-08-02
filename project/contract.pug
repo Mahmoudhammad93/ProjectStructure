@@ -1,0 +1,80 @@
+include pug/head
+  body
+    include pug/navbar
+    content.wrapper(style="background-color: #ddd")
+      #contract
+        .cover
+          .overlay
+            .cover-footer
+              .breadcrumbs
+                ul.list-unstyled
+                  li|Home
+                  li|Page Name
+              .back
+                span.btn-back|Back
+        section.contract-details
+            .row
+                .col-lg-8
+                    .customer-info
+                        .info
+                            h3.title|Customer Information
+                            input(type="email" class="form-control" placeholder="Type Your Email To Register")
+                            p|Already have an account with us? 
+                                a(href="#")|Log in
+                            ul.list-unstyled
+                                span.price|QAR 1200
+                                li
+                                    i(class="fa fa-home")
+                                    |391 m
+                                li
+                                    i(class="fa fa-bath")
+                                    |3
+                                li
+                                    i(class="fa fa-bed")
+                                    |2
+                                li
+                                    i(class="fa fa-home")
+                                    |1
+                        .image
+                            img(src="./images/aqar.jpeg")
+                    .property-details
+                        h6.title|Property Details
+                        h2.name|Villa On Qatar Avenue
+                        p|Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                        form
+                            .form-group
+                                input(type="text" class="form-control" placeholder="Property Location")
+                            .form-group
+                                input(type="text" class="form-control" placeholder="City")
+                            .form-group
+                                input(type="text" class="form-control" placeholder="Country")
+                            .form-group
+                                input(type="text" class="form-control" placeholder="Postal code")
+                .col-lg-4
+                    .payment
+                        .payment-info
+                            h6.payment-title|Your payments for 
+                                span.rent|(Rent)
+                            ul.list-unstyled
+                                li
+                                    span.label|Monthly Payment:
+                                    span.mony|QAR 4500
+                                li
+                                    span.label|Broker:
+                                    span.mony|QAR 0
+                                li
+                                    span.label|TAXES:
+                                    span.mony|QAR 0
+                            p.total
+                                span|Total
+                                span|QAR 4500
+                            p.grand-total
+                                span|Total
+                                span.mony|QAR 4500
+                        .payment-footer
+                            h6.payment-title|Payment Information
+                            p|Bank Transfer
+                        button|Continue
+
+                    
+include pug/footer

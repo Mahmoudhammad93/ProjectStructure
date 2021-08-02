@@ -1,0 +1,82 @@
+include pug/head
+  body
+    include pug/navbar
+    content.wrapper(style="background-color: #ddd")
+      #agents-developers-details
+        .cover
+          .overlay
+            .cover-footer
+              .breadcrumbs
+                ul.list-unstyled
+                  li|Home
+                  li|Page Name
+              .back
+                span.btn-back|Back
+        section.details
+            .row
+                .col-lg-8
+                    .about
+                        h4.special-title
+                            span.brand|Qaqarat 
+                            |Real-estate Developer
+                        h6.label|About Company name or agent name
+                        p.about-desc|Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        p.about-desc|Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        h6.label|Agents list or
+                        .list
+                            .box
+                                .image
+                                    img(src="./images/aqar.jpej")
+                                .info
+                                    h3.name|Britny Doe
+                                        span.badge|Selling Agent
+                                    p.desc|Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                        .contact-me
+                            h4.form-title|Contact Me or Us
+                            form
+                                .row
+                                    .col-lg-4
+                                        input(type="text" placeholder="Your Name")
+                                    .col-lg-4
+                                        input(type="email" placeholder="Email")
+                                    .col-lg-4
+                                        input(type="text" placeholder="Phone")
+                                    .col-lg-12
+                                        textarea(placeholder="Message" rows="5")
+                                    .col-lg-3
+                                        button|Send
+                .col-lg-4
+                    .projects-list
+                        h2.list-title|Our Projects
+                        .items.grid
+                            - var items = [{name:'The Project Name'},{name:'The Project Name'},{name:'The Project Name'},{name:'The Project Name'}]
+                            each item in items
+                                .box
+                                    .image
+                                        img(src="./images/aqar.jpeg")
+                                    .description
+                                        .name
+                                            p=item.name
+                                        .info
+                                            span.location
+                                                i(class="fa fa-map-marker") 
+                                                |The Pearl Doha
+                                            span.price
+                                                span.price-label|Price:
+                                                |QAR1200
+                                            p.desc|Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic
+                                        .box-footer
+                                            ul.list-unstyled
+                                                li
+                                                    i(class="fa fa-home")
+                                                    span|391 m
+                                                li
+                                                    i(class="fa fa-bath")
+                                                    span|3
+                                                li
+                                                    i(class="fa fa-bed")
+                                                    span|9
+                                                li
+                                                    i(class="fa fa-home")
+                                                    span|1
+include pug/footer

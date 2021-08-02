@@ -1,11 +1,156 @@
 .footer {
   font-size: 14px;
-  position: fixed;
+  position: relative;
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: #001;
-  color: #fff;
+  color: #615f5f;
+  background-color: #2A2955;
   text-align: center;
-  padding: 20px;
+  padding: 0;
+  .footer-map{
+    color: #fff;
+    padding: 2rem;
+    .footer-brand{
+      text-align: left;
+      .image{
+        width: 262px;
+        img{
+          width: 100%;
+        }
+      }
+      .title{
+        margin: 20px 0;
+      }
+      .contact-info{
+        li{
+          p{
+            a{
+              color: #fff;
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+      .social{
+        display: flex;
+        span{
+          font-weight: bold;
+          display: flex;
+          align-items: center;
+          margin-right: 15px;
+        }
+        li{
+          padding: 5px;
+          &:hover{
+            cursor: pointer;
+            i.fa-facebook{
+              color: #3b5999;
+            }
+            i.fa-twitter{
+              color: #55acee;
+            }
+            i.fa-google-plus{
+              color: #dd4b39;
+            }
+            i.fa-pinterest-p{
+              color: #bd081c;
+            }
+          }
+        }
+      }
+    }
+    .message{
+      .title{
+        margin-bottom: 2rem;
+      }
+      .form{
+        .form-title{
+          text-transform: uppercase;
+        }
+        form{
+          .btn{
+            text-transform: uppercase;
+            border-radius: 0;
+            background-color: #D6D6D6;
+            color: #9C0039;
+            padding: 8px 50px;
+            float: right;
+          }
+        }
+        width: 80%;
+        margin: auto;
+        text-align: left;
+      }
+    }
+    .pages{
+      text-align: left;
+      .title{
+        text-transform: uppercase;
+      }
+      .pages-list{
+        li{
+          border-bottom: 1px solid #ddd;
+          a{
+            display: block;
+            padding: 10px 0;
+            color: #fff;
+            text-transform: uppercase;
+          }
+        }
+      }
+      .subscribe{
+        .form-group{
+          display: flex;
+        }
+        button{
+          background-color: $main_color;
+          color: #fff;
+          border: 1px solid $main_color;
+          padding: 10px;
+          display: flex;
+          align-items: center;
+          i{
+            margin-right: 20px;
+          }
+        }
+        input{
+          padding: 10px;
+          border: none;
+          width: 100%;
+          &:focus{
+            outline: 0;
+          }
+          &::placeholder{
+            color: #BDBDBD;
+          }
+        }
+      }
+    }
+  }
+  .copyright{
+    background-color: #fff;
+    padding: 20px;
+    a{
+      color: #535353;
+    }
+  }
+}
+
+@media(max-width: 425px){
+  .footer{
+    .footer-map {
+      .message {
+        .title{
+          text-align: left;
+        }
+        .form{
+          width: 100%;
+          .btn{
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
 }

@@ -1,0 +1,63 @@
+
+.footer(id="contact_us")
+  .footer-map
+    .container
+      .row
+        .footer-brand(class="col-lg-3 col-md-6")
+          .image
+            img(src="./images/logo.png")
+          h4(class="title")|ABOUT Qaqarat
+          p(class="description")
+            |Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+          ul(class="contact-info list-unstyled")
+            - var list = ['(+974) 1234567890', 'mahmoudhammad423@gmail.com', 'Arab El-hisar El-Saf Giza']
+            each item in list
+              li
+                p
+                  a(href="#")= item
+          ul(class="social list-unstyled")
+            span|Follow me: 
+            - var social_list = ['envelope-o','facebook','twitter','google-plus','pinterest-p']
+            each item in social_list
+              li
+                i(class="fa fa-"+item)
+        .message(class="col-lg-6 col-md-6")
+          h4(class="title")
+            |Now You can sign your Contract Agreements Online
+          .form
+            h5(class="form-title")
+              |Send a message to Qaqarat
+            p|Lorem Ipsum is simply dummy text of the printing and typesetting industry the printing and typesetting industry
+            form
+              .row
+                .col-md-6
+                  .form-group
+                    input(type="text" class="form-control" placeholder="Your Name")
+                .col-md-6
+                  .form-group
+                    input(type="text" class="form-control" placeholder="Your Email")
+                .col-md-12
+                  .form-group
+                    textarea(class="form-control" rows="5" placeholder="Your name")
+                .col-md-12(class="align-self-end")
+                  .form-group
+                    button(class="btn btn-secondary")|Send
+        .pages(class="col-lg-3 col-md-12 pt-5")
+          h5(class="title mb-3 mt-5")
+            |Useful Links
+          ul(class="pages-list list-unstyled")
+            - var links = ['Terms of use','Privacy Policy','Contact Support','Knowledgebase','How to sign a contact','Faqs']
+            each link in links
+              li
+                a(href="#")=link
+          .subscribe
+            form
+              .form-group
+                button
+                  i(class="fa fa-paper-plane")
+                  |Subscribe
+                input(type="text" placeholder="Enter Your Email Right Here")
+
+  .copyright Qaqarat 2021 All Rights Reserved &copy; Made With Love By <b> <a href="#" target="_blanck"> Mahmoud Hammad </a> </b>
+
+include scripts
